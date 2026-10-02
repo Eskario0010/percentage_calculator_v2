@@ -1,2 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Percentage Calculator</title>
+    </head>
+    <body>
+        <form>
+            <h4>What is the number you want to find the percentage of?</h4>
+            <input type="number" name="value" placeholder="You Number Here">
+            <br>
+            <h4>What is the percentage you'd like to use? (between 0-100 only)</h4>
+            <input type="number" name="percentage" placeholder="Percentage Here">
+            <br>
+            <br>
+            <br>
+            <button type="submit">Submit!</button>
+            <h3 id="result" aria-live="polite"></h3>
+        </form>
+        <script>
+            const form = document.querySelector('form');
+            const valueInput = document.querySelector('input[name="value"]');
+            const percentageInput = document.querySelector('input[name="percentage"]');
+            const result = document.querySelector('#result');
+            
+            form.addEventlistener(submit, (event) => {
+                event.pteventDefault();
+                const value = parseFloat(valueInput.value);
+                const percentage =parseFloat(percentageInput.value);
+                if (percentage > 100) {
+                    result.textContent = 'Please enter a value that is under 100'
+                    return;
+                }
+                const resultValue = (value * percentage) / 100;
+                result.textContent = `${percentage}% of ${value} is ${resultValue}`;
+            }
+        </script>
+    </body>
