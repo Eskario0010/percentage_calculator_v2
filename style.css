@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #17026a;
+    background-color: #03000e;
     color: #ffffff;
     text-align: center; 
 }
@@ -14,10 +14,20 @@ button {
 }
  
 form {
-    background-color: #17026a;
+    background-color: #03000e;
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    felx-direction: column;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    background-color:#d5d955;
+    color: #000000;
+}
+
+input::placeholder{
+    color:#000000
 }
