@@ -24,8 +24,8 @@
             const percentageInput = document.querySelector('input[name="percentage"]');
             const result = document.querySelector('#result');
             
-            form.addEventlistener(submit, (event) => {
-                event.pteventDefault();
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
                 const value = parseFloat(valueInput.value);
                 const percentage =parseFloat(percentageInput.value);
                 if (percentage > 100) {
@@ -34,6 +34,6 @@
                 }
                 const resultValue = (value * percentage) / 100;
                 result.textContent = `${percentage}% of ${value} is ${resultValue}`;
-            }
+            });     
         </script>
     </body>

@@ -1,0 +1,14 @@
+style {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center; 
+}
+
+button {
+    background-color: #4CAF50;
+    border: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
