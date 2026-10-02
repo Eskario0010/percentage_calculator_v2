@@ -1,6 +1,6 @@
-style {
+body {
     font-family: Arial, sans-serif;
-    background-color: #000000;
+    background-color: #17026a;
     color: #ffffff;
     text-align: center; 
 }
@@ -11,4 +11,13 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+ 
+form {
+    background-color: #17026a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    felx-direction: column;
 }
