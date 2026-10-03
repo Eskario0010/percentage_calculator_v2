@@ -27,10 +27,15 @@
             
             form.addEventListener('submit', (event) => {
                 event.preventDefault();
+                if (valueInput.value === '' || percentageInput.value === '') {
+                    result.textContent = 'Please enter a value in both fields.';
+                    return;
+                }
+
                 const value = parseFloat(valueInput.value);
-                const percentage =parseFloat(percentageInput.value);
+                const percentage = parseFloat(percentageInput.value);
                 if (percentage > 100) {
-                    result.textContent = 'Please enter a value that is under 100'
+                    result.textContent = 'Please enter a percentage that is under 100'
                     return;
                 }
                 const resultValue = (value * percentage) / 100;
