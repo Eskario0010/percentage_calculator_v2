@@ -14,6 +14,7 @@ button {
 }
  
 form {
+    animation: appear 0.6s ease-out;
     background-color: #03000e;
     color: #ffffff;
     display: flex;
@@ -23,11 +24,29 @@ form {
     gap: 10px;
 }
 
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 input {
     background-color:#d5d955;
     color: #000000;
+    transition: 0.2s;
 }
 
 input::placeholder{
     color:#000000
+}
+
+input:focus {
+    transform: scale(1.03);
+    border-color: #8cfcff;
 }
