@@ -12,6 +12,10 @@ button {
     align-items: center;
     justify-content: center;
 }
+
+button:active {
+    transform: scale(0.95);
+}
  
 form {
     animation: appear 0.6s ease-out;
