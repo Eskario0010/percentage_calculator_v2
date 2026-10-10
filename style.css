@@ -16,9 +16,13 @@ button {
 button:active {
     transform: scale(0.95);
 }
+
+button:hover {
+    transform: scale(1.05)
+}
  
 form {
-    animation: appear 0.6s ease-out;
+    animation: appear 1s ease-out;
     background-color: #03000e;
     color: #ffffff;
     display: flex;
